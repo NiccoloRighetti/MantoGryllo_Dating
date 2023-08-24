@@ -26,6 +26,8 @@ for i in *mafft.fa; do trimal -in "$i" -out ../trimm_na/"${i::-8}".trim.faa -gt 
 Additional check by hand of the sequences. No sequence has been modified by hand.
 ## Phylogeny with iqtree (version 2.0.3 for Linux 64-bit built Dec 20 2020):
 ```
-iqtree -p ../../data/trimm_na/ -m TESTNEW -bb 1000 -T AUTO --prefix na.with --seqtype DNA # with Embioptera and Zoraptera
-iqtree -p ../../data/trimm_na/ -m TESTNEW -bb 1000 -T AUTO --prefix na.wout --seqtype DNA # without Embioptera and Zoraptera
+iqtree -p ../../../data/trimm_na/with/ -m TESTNEW -bb 1000 -T AUTO --prefix na.with --seqtype DNA -g ../../../data/topology_contraint/with_group.tree # with Embioptera and Zoraptera
+iqtree -p ../../../data/trimm_na/wout/ -m TESTNEW -bb 1000 -T AUTO --prefix na.wout --seqtype DNA # without Embioptera and Zoraptera
 ```
+
+COPIA IL FILE CON L'ALBERO GIUSTO!!!!!!

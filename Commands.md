@@ -30,4 +30,3 @@ iqtree -p ../../../data/trimm_na/with/ -m TESTNEW -bb 1000 -T AUTO --prefix na.w
 iqtree -p ../../../data/trimm_na/wout/ -m TESTNEW -bb 1000 -T AUTO --prefix na.wout --seqtype DNA # without Embioptera and Zoraptera
 ```
 
-COPIA IL FILE CON L'ALBERO GIUSTO!!!!!!

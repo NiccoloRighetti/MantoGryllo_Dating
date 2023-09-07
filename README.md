@@ -9,3 +9,7 @@ Dated Phylogeny of Mantophasmatodea and Grylloblattodea
   - Zorotypus medoensis
 3) Jacknife of fossils, they are 5. Every time I remove one of them, 5 runs each.
 4) Total number of MCMCtree runs is 25 with Embioptera and Zoraptera and 25 without them.
+# Paper draft
+## Introduction
+- Grylloblattoidea and Mantophasmatoidea (what, where)
+- Gap of knowledge (timing unknown)

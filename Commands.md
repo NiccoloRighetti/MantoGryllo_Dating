@@ -35,7 +35,7 @@ AMAS.py concat -i ../../trimm_na_ol/with/* -f fasta -d dna --concat-out ./concat
 ## Ultrametric tree generation
 Model selection with modeltest-ng (modeltest x.y.z; Copyright (C) 2017 Diego Darriba, David Posada, Alexandros Stamatakis):
 ```
-
+modeltest-ng -d nt -i ../../../../data/trimmed_concat/with/concat_with.fa -q ../../../../data/trimmed_concat/with/partitions.txt -o ./modeltest_with
 ```
 Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```

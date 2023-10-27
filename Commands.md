@@ -24,8 +24,20 @@ Trimming with trimAl (v1.4.rev15 build[2013-12-17]):
 ```
 for i in *mafft.fa; do trimal -in "$i" -out ../trimm_na/"${i::-8}".trim.faa -gappyout -resoverlap 0.80 -seqoverlap 80; done
 ```
+Trimmed fasta to oneline:
+```
+for i in *; do awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < "$i" > ../../trimm_na_ol/with/"$i".ol; done
+```
+Concatenate all fasta for phylogenetic inference with RAxML:
+```
+AMAS.py concat -i ../../trimm_na_ol/with/* -f fasta -d dna --concat-out ./concat_with.fa --part-format raxml
+```
 ## Ultrametric tree generation
-Maximum Likelihood phylogeny with iqtree (version 2.0.3 for Linux 64-bit built Dec 20 2020):
+Model selection with modeltest-ng (modeltest x.y.z; Copyright (C) 2017 Diego Darriba, David Posada, Alexandros Stamatakis):
+```
+
+```
+Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```
 iqtree -p ../../../data/trimm_na_ol/with/ -m TESTNEW -bb 1000 -T AUTO --prefix na.with --seqtype DNA -g ../../../data/topology_constraint/with_group.tree # with Embioptera and Zoraptera
 # iqtree -p ../../../data/trimm_na_ol/wout/ -m TESTNEW -bb 1000 -T AUTO --prefix na.wout --seqtype DNA -g ../../../data/topology_constraint/wout_group.tree # without Embioptera and Zoraptera

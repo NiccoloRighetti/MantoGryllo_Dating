@@ -22,7 +22,7 @@ for i in *.fa; do mafft --thread 10 --reorder --adjustdirection "$i" > ../mafft_
 Additional check by hand of the sequences, some were reversed complemented (almost always just the outgroups).
 Trimming with trimAl (v1.4.rev15 build[2013-12-17]):
 ```
-for i in *mafft.fa; do trimal -in "$i" -out ../trimm_na/"${i::-8}".trim.faa -gappyout -resoverlap 80 -seqoverlap -0.8; done
+for i in *mafft.fa; do trimal -in "$i" -out ../trimm_na/"${i::-8}".trim.faa -gappyout -resoverlap 0.80 -seqoverlap 80; done
 ```
 ## Ultrametric tree generation
 Maximum Likelihood phylogeny with iqtree (version 2.0.3 for Linux 64-bit built Dec 20 2020):

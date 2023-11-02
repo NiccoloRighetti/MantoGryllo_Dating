@@ -37,6 +37,8 @@ Model selection with modeltest-ng (modeltest x.y.z; Copyright (C) 2017 Diego Dar
 ```
 modeltest-ng -d nt -i ../../../../data/trimmed_concat/with/concat_with.fa -q ../../../../data/trimmed_concat/with/partitions.txt -o ./modeltest_with
 ```
+
+The best model according to BIC, AIC and AICc statistics is: ```TPM3uf+I+G4```.
 Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```
 iqtree -p ../../../data/trimm_na_ol/with/ -m TESTNEW -bb 1000 -T AUTO --prefix na.with --seqtype DNA -g ../../../data/topology_constraint/with_group.tree # with Embioptera and Zoraptera

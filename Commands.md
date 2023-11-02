@@ -28,6 +28,12 @@ Trimmed fasta to oneline:
 ```
 for i in *; do awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < "$i" > ../../trimm_na_ol/with/"$i".ol; done
 ```
+ID adjustment:
+```
+sed -i 's/;//' *
+```
+
+
 Concatenate all fasta for phylogenetic inference with RAxML:
 ```
 AMAS.py concat -i ../../trimm_na_ol/with/* -f fasta -d dna --concat-out ./concat_with.fa --part-format raxml
@@ -37,11 +43,12 @@ Model selection with modeltest-ng (modeltest x.y.z; Copyright (C) 2017 Diego Dar
 ```
 modeltest-ng -d nt -i ../../../../data/trimmed_concat/with/concat_with.fa -q ../../../../data/trimmed_concat/with/partitions.txt -o ./modeltest_with
 ```
-
-The best model according to BIC, AIC and AICc statistics is: ```TPM3uf+I+G4```.  
+I use the file modeltest_with.part.aicc.  
 Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```
-iqtree -p ../../../data/trimm_na_ol/with/ -m TESTNEW -bb 1000 -T AUTO --prefix na.with --seqtype DNA -g ../../../data/topology_constraint/with_group.tree # with Embioptera and Zoraptera
+raxml-ng -msa ../../../../data/trimmed_concat/with/concat_with.fa --prefix phylo_with.tree --bootstrap 1000 --model ../modeltest/modeltest_with.part.aicc
+
+# iqtree -p ../../../data/trimm_na_ol/with/ -m TESTNEW -bb 1000 -T AUTO --prefix na.with --seqtype DNA -g ../../../data/topology_constraint/with_group.tree # with Embioptera and Zoraptera
 # iqtree -p ../../../data/trimm_na_ol/wout/ -m TESTNEW -bb 1000 -T AUTO --prefix na.wout --seqtype DNA -g ../../../data/topology_constraint/wout_group.tree # without Embioptera and Zoraptera
 ```
 For the moment I do everything with the problematic species:

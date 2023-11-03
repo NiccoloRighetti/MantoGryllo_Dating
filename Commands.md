@@ -6,10 +6,12 @@ conda init
 conda activate phylocon
 ```
 ## Needed programs
-- Iqtree
 - Mafft
 - TrimAl
 - Paml (for MCMCtree)
+- Raxml-ng
+- Modeltest-ng
+- Amas
 ## Sequence preparation
 Remotion of gaps:
 ```

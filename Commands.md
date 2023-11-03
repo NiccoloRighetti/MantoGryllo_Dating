@@ -51,10 +51,7 @@ modeltest-ng -d nt -i ../../../../data/trimmed_concat/with/concat_with.fa -q ../
 I use the file modeltest_with.part.aicc.  
 Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```
-raxml-ng -msa ../../../../data/trimmed_concat/with/concat_with.fa --prefix ./phylo_with.tree --bootstrap 1000 --model ../modeltest/modeltest_with.part.aicc -t ../../../../data/topology_constraint/with_group.tree
-
-# iqtree -p ../../../data/trimm_na_ol/with/ -m TESTNEW -bb 1000 -T AUTO --prefix na.with --seqtype DNA -g ../../../data/topology_constraint/with_group.tree # with Embioptera and Zoraptera
-# iqtree -p ../../../data/trimm_na_ol/wout/ -m TESTNEW -bb 1000 -T AUTO --prefix na.wout --seqtype DNA -g ../../../data/topology_constraint/wout_group.tree # without Embioptera and Zoraptera
+raxml-ng -msa ../../../../data/trimmed_concat/with/concat_with.fa --prefix ./phylo_with.tree --bootstrap 1000 --model ../modeltest/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
 ```
 For the moment I do everything with the problematic species:
 

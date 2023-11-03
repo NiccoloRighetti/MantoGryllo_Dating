@@ -51,7 +51,7 @@ modeltest-ng -d nt -i ../../../../data/trimmed_concat_na/with/concat_with.fa -q 
 I use the file modeltest_with.part.aicc.  
 Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```
-raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./phylo_with.tree -b 1000 --model ../modeltest/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
+raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./phylo_with.tree --all --bs-trees 1000 --model ../../modeltest/aa/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
 ```
 For the moment I do everything with the problematic species:
 

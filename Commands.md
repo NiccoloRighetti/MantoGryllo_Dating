@@ -46,12 +46,12 @@ AMAS.py concat -i ../../trimm_na_ol/with/* -f fasta -d dna --concat-out ./concat
 ## Ultrametric tree generation
 Model selection with modeltest-ng (modeltest x.y.z; Copyright (C) 2017 Diego Darriba, David Posada, Alexandros Stamatakis):
 ```
-modeltest-ng -d nt -i ../../../../data/trimmed_concat/with/concat_with.fa -q ../../../../data/trimmed_concat/with/partitions.txt -o ./modeltest_with
+modeltest-ng -d nt -i ../../../../data/trimmed_concat_na/with/concat_with.fa -q ../../../../data/trimmed_concat_na/with/partitions.txt -o ./modeltest_with
 ```
 I use the file modeltest_with.part.aicc.  
 Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```
-raxml-ng -msa ../../../../data/trimmed_concat/with/concat_with.fa --prefix ./phylo_with.tree -b 1000 --model ../modeltest/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
+raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./phylo_with.tree -b 1000 --model ../modeltest/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
 ```
 For the moment I do everything with the problematic species:
 

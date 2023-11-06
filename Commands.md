@@ -56,7 +56,7 @@ For the moment I do everything with the problematic species (always "with" direc
 ### Nucleotides
 Fasta to Phylip through Aliview: ```concat_with_phy```.  
 Tree is already in Newick format: ```ultrametric_na.tree```.  
-
+1. CALCULATE RATE PRIOR
 
 ### Amino acids
 Fasta to Phylip through Aliview: ```concat_with_phy```.  

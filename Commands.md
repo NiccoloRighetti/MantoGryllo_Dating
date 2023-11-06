@@ -37,8 +37,6 @@ sed -i 's/_R_//' *
 sed -i 's/bifralecta/bifratrilecta/' *
 sed -i 's/tanzaniophasma/Tanzaniophasma/' *
 ```
-
-
 Concatenate all fasta for phylogenetic inference with RAxML:
 ```
 AMAS.py concat -i ../../trimm_na_ol/with/* -f fasta -d dna --concat-out ./concat_with.fa --part-format raxml
@@ -51,7 +49,11 @@ modeltest-ng -d nt -i ../../../../../data/trimmed_concat_na/with/concat_with.fa 
 I use the file modeltest_with.part.aicc.  
 Maximum Likelihood phylogeny with RAxML (version 8.2.12 released by Alexandros Stamatakis on May 2018):
 ```
-raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./phylo_with.tree --all --bs-trees 1000 --model ../../modeltest/aa/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
+raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./phylo_with.tree --all --bs-trees 100 --model ../../modeltest/aa/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
 ```
-For the moment I do everything with the problematic species:
+For the moment I do everything with the problematic species (always "with" directories).  
+## MCMCtree file preparation
+### Nucleotides
+Fasta to Phylip through Aliview
 
+### Amino acids

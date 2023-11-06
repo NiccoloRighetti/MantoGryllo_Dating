@@ -54,6 +54,9 @@ raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./
 For the moment I do everything with the problematic species (always "with" directories).  
 ## MCMCtree file preparation
 ### Nucleotides
-Fasta to Phylip through Aliview
+Fasta to Phylip through Aliview: ```concat_with_phy```.  
+Tree is already in Newick format: ```ultrametric_na.tree```.  
+
 
 ### Amino acids
+Fasta to Phylip through Aliview: ```concat_with_phy```.  

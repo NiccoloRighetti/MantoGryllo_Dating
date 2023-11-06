@@ -11,6 +11,7 @@ Dated Phylogeny of Mantophasmatodea and Grylloblattodea
 4) Total number of MCMCtree runs is 6x5x3 with Embioptera and Zoraptera and 6x5x3 without them.
 # Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.
+[Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
 ## Introduction
 - Grylloblattoidea and Mantophasmatoidea (what, where)
 - Gap of knowledge (timing unknown)

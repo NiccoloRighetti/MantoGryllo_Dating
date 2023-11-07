@@ -65,7 +65,10 @@ library( phytools )
 raw_tt <- ape::read.tree( file = "fna_tree.new" )
 # Rate estimation:
 tree_height <- max( phytools::nodeHeights( raw_tt ) )  # 2.547035
-
+root_age <- 5.21  # from Wolfe et al., 2014 (crown Neoptera)
+mean_rate <- tree_height / root_age # 0.4888743 subst/site per time unit
+alpha <- 2
+beta <- alpha/mean_rate  # 4.091031
 ```
 
 

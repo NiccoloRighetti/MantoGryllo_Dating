@@ -108,6 +108,22 @@ Now i run mcmctree to create the input file for baseml:
 ```
 mcmctree prepbaseml.ctl
 ```
+I stop it as I see “counting frequencies…”
+I change method to 1 and alpha to 2.
+I run baseml:
+```
+sed -i 's/method = 0/method = 1/; s/alpha = 0.5/alpha = 2/' tmp0001.ctl 
+baseml tmp0001.ctl
+mv rst2 in.BV
+```
+
+
+
+
+
+
+
+
 
 ### Amino acids
 Fasta to Phylip through Aliview: ```concat_with_phy```.  

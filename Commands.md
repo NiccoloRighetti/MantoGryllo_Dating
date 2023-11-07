@@ -70,7 +70,44 @@ mean_rate <- tree_height / root_age # 0.4888743 subst/site per time unit
 alpha <- 2
 beta <- alpha/mean_rate  # 4.091031
 ```
+2. BASEML FOR HESSIAN ESTIMATION
+```prebaseml.ctl``` file:
+```
+          seed = -1
+       seqfile = concat_with.phy
+      treefile = tree_uncalib.tree
+      mcmcfile = mcmc.txt
+       outfile = out.txt
 
+         ndata = 1
+       seqtype = 0    * 0: nucleotides; 1:codons; 2:AAs
+       usedata = 3    * 0: no data (prior); 1:exact likelihood;
+                      * 2:approximate likelihood; 3:out.BV (in.BV)
+         clock = 1    * 1: global clock; 2: independent rates; 3: correlated rates
+
+         model = 4    * 0:JC69, 1:K80, 2:F81, 3:F84, 4:HKY85
+         alpha = 2  * alpha for gamma rates at sites
+         ncatG = 5    * No. categories in discrete gamma
+
+     cleandata = 0    * remove sites with ambiguity data (1:yes, 0:no)?
+
+       BDparas = 1 1 0.1    * birth, death, sampling
+
+   rgene_gamma = 2 409   * gammaDir prior for rate for genes
+  sigma2_gamma = 1 10  * gammaDir prior for sigma^2     (for clock=2 or 3)
+
+         print = 1       * 0: no mcmc sample; 1: everything except branch rates 2: everything
+        burnin = 100000
+      sampfreq = 1000
+```
+From ultrametric tree to uncalibrated tree:
+```
+sed 's/:[0-9.]*//g' ultrametric_na.tree.new > tree_uncalib.tree
+```
+Now i run mcmctree to create the input file for baseml:
+```
+mcmctree prepbaseml.ctl
+```
 
 ### Amino acids
 Fasta to Phylip through Aliview: ```concat_with_phy```.  

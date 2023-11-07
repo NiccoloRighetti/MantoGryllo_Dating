@@ -100,7 +100,7 @@ beta <- alpha/mean_rate  # 4.091031
         burnin = 100000
       sampfreq = 1000
 ```
-From ultrametric tree to uncalibrated tree:
+From ultrametric tree to uncalibrated tree (also add by hand n° of sequences and number of trees in the first row):
 ```
 sed 's/:[0-9.]*//g' ultrametric_na.tree.new > tree_uncalib.tree
 ```

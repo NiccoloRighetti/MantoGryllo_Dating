@@ -57,10 +57,15 @@ For the moment I do everything with the problematic species (always "with" direc
 Fasta to Phylip through Aliview: ```concat_with_phy```.  
 Tree is already in Newick format: ```ultrametric_na.tree```.  
 1. CALCULATE RATE PRIOR IN R
-Needed libraries:
 ```
+# Needed libraries:
 library( rstudioapi )
 library( phytools )
+# Ultrametric tree import:
+raw_tt <- ape::read.tree( file = "fna_tree.new" )
+# Rate estimation:
+tree_height <- max( phytools::nodeHeights( raw_tt ) )  # 2.547035
+
 ```
 
 

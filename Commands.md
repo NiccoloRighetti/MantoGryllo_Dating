@@ -108,16 +108,18 @@ Now i run mcmctree to create the input file for baseml:
 ```
 mcmctree prepbaseml.ctl
 ```
-I stop it as I see “counting frequencies…”
-I change method to 1 and alpha to 2.
+I stop it as I see “counting frequencies…”.  
+I change method to 1 and alpha to 2.  
 I run baseml:
 ```
 sed -i 's/method = 0/method = 1/; s/alpha = 0.5/alpha = 2/' tmp0001.ctl 
 baseml tmp0001.ctl
 mv rst2 in.BV
 ```
-
-
+I modify the .ctl file (uncalib_tree -> calib_tree) and create input files for the three clock model (1,2,3).
+```
+sed 's/usedata = 3/usedata = 2 in.BV 1/; s/tree_uncalib.tree/tree_calib.tree/' prepbaseml.ctl > truemcmctree.ctl
+```
 
 
 

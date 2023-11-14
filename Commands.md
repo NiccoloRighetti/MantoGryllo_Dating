@@ -145,11 +145,11 @@ library( phytools )
 # Ultrametric tree import:
 raw_tt <- ape::read.tree( file = "fna_tree.new" )
 # Rate estimation:
-tree_height <- max( phytools::nodeHeights( raw_tt ) )  # 2.547035
+tree_height <- max( phytools::nodeHeights( raw_tt ) )  # 1.696109
 root_age <- 5.21  # from Wolfe et al., 2014 (crown Neoptera)
-mean_rate <- tree_height / root_age # 0.4888743 subst/site per time unit
+mean_rate <- tree_height / root_age # 0.3255488 subst/site per time unit
 alpha <- 2
-beta <- alpha/mean_rate  # 4.091031
+beta <- alpha/mean_rate  # 6.143473
 ```
 2. BASEML FOR HESSIAN ESTIMATION
 ```prebaseml.ctl``` file:
@@ -207,9 +207,24 @@ sed -i 's/in.BV/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmct
 ```
 I decide to keep the calibration prior wout a **uniform** distribution to reduce personal bias in the modelization of the distributions. The calibrated tree is as following:
 ```
-(Anax_imperator,((Zorotypus_medoensis,(Challia_fletcheri,Euborellia_arcanum)),(((Mesocapnia_arizonensis,Pteronarcys_princeps),(Zelandoperla_fenestrata,Acroneuria_hainana))'B(2.683,4.11)',(((Gryllotalpa_unispina,Teleogryllus_emma),(Atractomorpha_sinensis,(Acrida_cinerea,(Xyleus_modestus,Tristira_magellanica))))'B(2.718,4.11)',(((Leptomantella_albella,((Creobroter_gemmatus,Anaxarcha_zhengi),(Mantis_religiosa,(Rhombodera_valida,Tenodera_sinesi)))),((Gromphadorhina_portentosa,Blattella_bisignata),(Eupolyphaga_sinensis,(Periplaneta_americana,(Cryptocercus_kyebangensis,(Mastotermes_darwiniensis,(Zootermopsis_nevadensis,(Cryptotermes_secundus,(Nasutitermes_corniger,(Reticulitermes_flavipes,(Coptotermes_formosanus,Heterotermes_validus))))))'B(1.303,3.25)')))))'B(1.45,3,16)',(((Galloisiana_yusai,(Grylloblatta_sculleni,Grylloblatta_bifratrilecta)),(Tanzaniophasma_sp,(Mantophasma_sp,Sclerophasma_paresisensis))),((Aposthonia_japonica,(Aposthonia_borneensis,Eosembia_sp)),(Timema_californicum,(Carausius_morosus,(((Nanhuaphasma_hamicercum,Orthomeria_smaragdinum),(Phyllium_tibetense,Cryptophyllium_westwoodi)),(Peruphasma_schultei,((Bacillus_rossius,Sipyloidea_sipylus),(Heteropteryx_dilatata,(Extatosoma_tiaratum,Ramulus_irregulariterdentatus)))))))'B(0.982,4.11)')))))))'B(3.199,5.21)';
+(Anax_imperator,(((Mesocapnia_arizonensis,Pteronarcys_princeps),(Zelandoperla_fenestrata,Acroneuria_hainana))'B(2.683,4.11)',(((Gryllotalpa_unispina,Teleogryllus_emma),(Atractomorpha_sinensis,(Acrida_cinerea,(Xyleus_modestus,Tristira_magellanica))))'B(2.718,4.11)',(((Leptomantella_albella,((Creobroter_gemmatus,Anaxarcha_zhengi),(Mantis_religiosa,(Rhombodera_valida,Tenodera_sinesi)))),((Gromphadorhina_portentosa,Blattella_bisignata),(Eupolyphaga_sinensis,(Periplaneta_americana,(Cryptocercus_kyebangensis,(Mastotermes_darwiniensis,(Zootermopsis_nevadensis,(Cryptotermes_secundus,(Nasutitermes_corniger,(Reticulitermes_flavipes,(Coptotermes_formosanus,Heterotermes_validus))))))'B(1.303,3.25)')))))'B(1.45,3,16)',(((Galloisiana_yusai,(Grylloblatta_sculleni,Grylloblatta_bifratrilecta)),(Tanzaniophasma_sp,(Mantophasma_sp,Sclerophasma_paresisensis))),(Timema_californicum,(Carausius_morosus,(((Nanhuaphasma_hamicercum,Orthomeria_smaragdinum),(Phyllium_tibetense,Cryptophyllium_westwoodi)),(Peruphasma_schultei,((Bacillus_rossius,Sipyloidea_sipylus),(Heteropteryx_dilatata,(Extatosoma_tiaratum,Ramulus_irregulariterdentatus))))))'B(0.982,4.11)'))))))'B(3.199,5.21)';
 ```
+Create the folders for 3 clock models and 10 run each:
+```
+#!/bin/bash
 
+# Loop through the clock values (1, 2, 3)
+for clock in {1..3}; do
+    # Loop through the 10 runs
+    for run in {1..5}; do
+        # Define the folder name for the current run and clock
+        folder="run${run}_clock${clock}"
+
+        # Create the directory if it doesn't exist
+        mkdir -p "$folder"
+    done
+done
+```
 
 
 

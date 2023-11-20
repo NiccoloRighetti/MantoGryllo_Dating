@@ -11,7 +11,7 @@ Dated Phylogeny of Mantophasmatodea and Grylloblattodea
   - Euborellia arcanum
 3) Jacknife of fossils, they are 5. Every time I remove one of them, 5 runs each. I do this with the three clock models implemented in MCMCtree.
 4) Total number of MCMCtree runs is 6x5x3 with Embioptera and Zoraptera and 6x5x3 without them.  
-The results for the runs with all the fossils are store in [All_Fossils](All_Fossils), there you can find:
+The results for the runs with all the fossils are store in [All_Fossils](All_Fossils/lnL), there you can find:
 - the lnL stats for convergence of 5 runs for each model with and wout Embioptera and Zoraptera (20x10^6 gen with 10% burnin)
 - the tree in .pdf for each model with and without Embioptera and Zoraptera in [this](All_Fossils/Trees.pdf) directory.
 # Paper draft

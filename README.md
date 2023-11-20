@@ -13,7 +13,7 @@ Dated Phylogeny of Mantophasmatodea and Grylloblattodea
 4) Total number of MCMCtree runs is 6x5x3 with Embioptera and Zoraptera and 6x5x3 without them.  
 The results for the runs with all the fossils are store in [All_Fossils](All_Fossils), there you can find:
 - the lnL stats for convergence of 5 runs for each model with and wout Embioptera and Zoraptera (20x10^6 gen with 10% burnin)
-- the tree in .pdf for each model with and without Embioptera and Zoraptera.
+- the tree in .pdf for each model with and without Embioptera and Zoraptera (in [this](All_Fossils/Trees.pdf) directory).
 # Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
 [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.

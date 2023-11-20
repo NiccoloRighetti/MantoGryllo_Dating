@@ -124,9 +124,9 @@ sed -i 's/concat_with.phy/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analy
 sed -i 's/tree_calib.tree/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmctree\/with\/na\/input_data\/tree_calib.tree/' truemcmctree.ctl
 sed -i 's/in.BV/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmctree\/with\/na\/input_data\/in.BV/' truemcmctree.ctl
 ```
-I decide to keep the calibration prior with a skew-normal distribution. The calibrated tree is as following:
+I decide to keep the calibration prior with a skew-normal distribution, with the exeption of a normal distribution on the root prior. The calibrated tree is as following:
 ```
-(Anax_imperator,((Zorotypus_medoensis,(Challia_fletcheri,Euborellia_arcanum)),(((Mesocapnia_arizonensis,Pteronarcys_princeps),(Zelandoperla_fenestrata,Acroneuria_hainana))'B(2.683,4.11)',(((Gryllotalpa_unispina,Teleogryllus_emma),(Atractomorpha_sinensis,(Acrida_cinerea,(Xyleus_modestus,Tristira_magellanica))))'B(2.718,4.11)',(((Leptomantella_albella,((Creobroter_gemmatus,Anaxarcha_zhengi),(Mantis_religiosa,(Rhombodera_valida,Tenodera_sinesi)))),((Gromphadorhina_portentosa,Blattella_bisignata),(Eupolyphaga_sinensis,(Periplaneta_americana,(Cryptocercus_kyebangensis,(Mastotermes_darwiniensis,(Zootermopsis_nevadensis,(Cryptotermes_secundus,(Nasutitermes_corniger,(Reticulitermes_flavipes,(Coptotermes_formosanus,Heterotermes_validus))))))'B(1.303,3.25)')))))'B(1.45,3,16)',(((Galloisiana_yusai,(Grylloblatta_sculleni,Grylloblatta_bifratrilecta)),(Tanzaniophasma_sp,(Mantophasma_sp,Sclerophasma_paresisensis))),((Aposthonia_japonica,(Aposthonia_borneensis,Eosembia_sp)),(Timema_californicum,(Carausius_morosus,(((Nanhuaphasma_hamicercum,Orthomeria_smaragdinum),(Phyllium_tibetense,Cryptophyllium_westwoodi)),(Peruphasma_schultei,((Bacillus_rossius,Sipyloidea_sipylus),(Heteropteryx_dilatata,(Extatosoma_tiaratum,Ramulus_irregulariterdentatus)))))))'B(0.982,4.11)')))))))'B(3.199,5.21)';
+(Anax_imperator,((Zorotypus_medoensis,(Challia_fletcheri,Euborellia_arcanum)),(((Mesocapnia_arizonensis,Pteronarcys_princeps),(Zelandoperla_fenestrata,Acroneuria_hainana))'SN(3.3965,0.2,50)',(((Gryllotalpa_unispina,Teleogryllus_emma),(Atractomorpha_sinensis,(Acrida_cinerea,(Xyleus_modestus,Tristira_magellanica))))'SN(3.414,0.2,50)',(((Leptomantella_albella,((Creobroter_gemmatus,Anaxarcha_zhengi),(Mantis_religiosa,(Rhombodera_valida,Tenodera_sinesi)))),((Gromphadorhina_portentosa,Blattella_bisignata),(Eupolyphaga_sinensis,(Periplaneta_americana,(Cryptocercus_kyebangensis,(Mastotermes_darwiniensis,(Zootermopsis_nevadensis,(Cryptotermes_secundus,(Nasutitermes_corniger,(Reticulitermes_flavipes,(Coptotermes_formosanus,Heterotermes_validus))))))'SN(2.276,0.2,50)')))))'SN(2.305,0.2,50)',(((Galloisiana_yusai,(Grylloblatta_sculleni,Grylloblatta_bifratrilecta)),(Tanzaniophasma_sp,(Mantophasma_sp,Sclerophasma_paresisensis))),((Aposthonia_japonica,(Aposthonia_borneensis,Eosembia_sp)),(Timema_californicum,(Carausius_morosus,(((Nanhuaphasma_hamicercum,Orthomeria_smaragdinum),(Phyllium_tibetense,Cryptophyllium_westwoodi)),(Peruphasma_schultei,((Bacillus_rossius,Sipyloidea_sipylus),(Heteropteryx_dilatata,(Extatosoma_tiaratum,Ramulus_irregulariterdentatus)))))))'SN(2.546,0.2,50)')))))))'B(3.199,5.21)';
 ```
 
 ## MCMCtree without Embiottera, Zoraptera and Dermaptera 
@@ -201,9 +201,9 @@ sed -i 's/concat_wout.phy/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analy
 sed -i 's/tree_calib.tree/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmctree\/wout\/na\/input_data\/tree_calib.tree/' truemcmctree.ctl
 sed -i 's/in.BV/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmctree\/wout\/na\/input_data\/in.BV/' truemcmctree.ctl
 ```
-I decide to keep the calibration prior wout a **uniform** distribution to reduce personal bias in the modelization of the distributions. The calibrated tree is as following:
+I decide to keep the calibration prior with a skew-normal distribution, with the exeption of a normal distribution on the root prior. The calibrated tree is as following:
 ```
-(Anax_imperator,(((Mesocapnia_arizonensis,Pteronarcys_princeps),(Zelandoperla_fenestrata,Acroneuria_hainana))'B(2.683,4.11)',(((Gryllotalpa_unispina,Teleogryllus_emma),(Atractomorpha_sinensis,(Acrida_cinerea,(Xyleus_modestus,Tristira_magellanica))))'B(2.718,4.11)',(((Leptomantella_albella,((Creobroter_gemmatus,Anaxarcha_zhengi),(Mantis_religiosa,(Rhombodera_valida,Tenodera_sinesi)))),((Gromphadorhina_portentosa,Blattella_bisignata),(Eupolyphaga_sinensis,(Periplaneta_americana,(Cryptocercus_kyebangensis,(Mastotermes_darwiniensis,(Zootermopsis_nevadensis,(Cryptotermes_secundus,(Nasutitermes_corniger,(Reticulitermes_flavipes,(Coptotermes_formosanus,Heterotermes_validus))))))'B(1.303,3.25)')))))'B(1.45,3,16)',(((Galloisiana_yusai,(Grylloblatta_sculleni,Grylloblatta_bifratrilecta)),(Tanzaniophasma_sp,(Mantophasma_sp,Sclerophasma_paresisensis))),(Timema_californicum,(Carausius_morosus,(((Nanhuaphasma_hamicercum,Orthomeria_smaragdinum),(Phyllium_tibetense,Cryptophyllium_westwoodi)),(Peruphasma_schultei,((Bacillus_rossius,Sipyloidea_sipylus),(Heteropteryx_dilatata,(Extatosoma_tiaratum,Ramulus_irregulariterdentatus))))))'B(0.982,4.11)'))))))'B(3.199,5.21)';
+(Anax_imperator,(((Mesocapnia_arizonensis,Pteronarcys_princeps),(Zelandoperla_fenestrata,Acroneuria_hainana))'SN(3.3965,0.2,50)',(((Gryllotalpa_unispina,Teleogryllus_emma),(Atractomorpha_sinensis,(Acrida_cinerea,(Xyleus_modestus,Tristira_magellanica))))'SN(3.414,0.2,50)',(((Leptomantella_albella,((Creobroter_gemmatus,Anaxarcha_zhengi),(Mantis_religiosa,(Rhombodera_valida,Tenodera_sinesi)))),((Gromphadorhina_portentosa,Blattella_bisignata),(Eupolyphaga_sinensis,(Periplaneta_americana,(Cryptocercus_kyebangensis,(Mastotermes_darwiniensis,(Zootermopsis_nevadensis,(Cryptotermes_secundus,(Nasutitermes_corniger,(Reticulitermes_flavipes,(Coptotermes_formosanus,Heterotermes_validus))))))'SN(2.276,0.2,50)')))))'SN(2.305,0.2,50)',(((Galloisiana_yusai,(Grylloblatta_sculleni,Grylloblatta_bifratrilecta)),(Tanzaniophasma_sp,(Mantophasma_sp,Sclerophasma_paresisensis))),(Timema_californicum,(Carausius_morosus,(((Nanhuaphasma_hamicercum,Orthomeria_smaragdinum),(Phyllium_tibetense,Cryptophyllium_westwoodi)),(Peruphasma_schultei,((Bacillus_rossius,Sipyloidea_sipylus),(Heteropteryx_dilatata,(Extatosoma_tiaratum,Ramulus_irregulariterdentatus))))))'SN(2.546,0.2,50)'))))))'B(3.199,5.21)';
 ```
 Create the folders for 3 clock models and 10 run each:
 ```
@@ -221,8 +221,9 @@ for clock in {1..3}; do
     done
 done
 ```
+## Convergence check
 
+Convergence for the 5 runs of each model with and without the two groups has been checked through Tracer. After 20x10^6 generations with a burnin of 10% all runs reached convergence with ESS score >1000 in each node for every model, both with and without the groups.
 
-
-### Amino acids
-Fasta to Phylip through Aliview: ```concat_wout_phy```.  
+# Tree display and radarcharts
+One tree for each model with and without Embioptera and Zoraptera (a total of 6 trees) has been plotted through custom scripts.

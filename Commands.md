@@ -223,7 +223,7 @@ done
 ```
 ## Convergence check
 
-Convergence for the 5 runs of each model with and without the two groups has been checked through Tracer. After 20x10^6 generations with a burnin of 10% all runs reached convergence with ESS score >1000 in each node for every model, both with and without the groups.
+Convergence for the 5 runs of each model with and without the two groups has been checked through Tracer v1.7.2. After 20x10^6 generations with a burnin of 10% all runs reached convergence with ESS score >1000 in each node for every model, both with and without the groups.
 
 # Tree display and radarcharts
 One tree for each model with and without Embioptera and Zoraptera (a total of 6 trees) has been plotted through custom scripts.

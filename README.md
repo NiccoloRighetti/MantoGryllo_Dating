@@ -7,8 +7,11 @@ Dated Phylogeny of Mantophasmatodea and Grylloblattodea
   - Aposthonia japonica
   - Eosembia sp.
   - Zorotypus medoensis
+  - Challia fletcheri
+  - Euborellia arcanum
 3) Jacknife of fossils, they are 5. Every time I remove one of them, 5 runs each. I do this with the three clock models implemented in MCMCtree.
 4) Total number of MCMCtree runs is 6x5x3 with Embioptera and Zoraptera and 6x5x3 without them.
+The results for the runs with all the fossils are store in .
 # Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
 [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.

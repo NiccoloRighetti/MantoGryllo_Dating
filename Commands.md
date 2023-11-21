@@ -229,4 +229,4 @@ Convergence for the 5 runs of each model with and without the two groups has bee
 One tree for each model with and without Embioptera and Zoraptera (a total of 6 trees) has been plotted through custom scripts.
 
 # Fossils Jackknife
-To check whether some prior calibrations bias the dating analysis, a jackknife of the fossils has been done by repeting the analysis 5 times, each time removing one fossil from the ```tree_calib.tre``` file.
+To check whether some prior calibrations bias the dating analysis, a jackknife of the fossils has been done by repeating the analysis 5 times, each time removing one fossil from the ```tree_calib.tre``` file.

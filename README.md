@@ -18,7 +18,7 @@ The results for the runs with all the fossils are store in [All_Fossils](All_Fos
 - radarcharts for each clock model comparing the dating with/without Embioptera/Zoraptera are in [this](All_Fossils/Radarcharts.pdf) directory.
 # Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
-- abstract: 200
+- abstract: 200 (at the moment 175 words by Nick)
 - intro: 500
 - mat/met: 700 (at the moment 479 words by Nick, needed ~150 words by Giobbe for mt-assembly and data collection)
 - res/disc: 800

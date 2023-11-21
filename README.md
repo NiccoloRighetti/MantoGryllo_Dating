@@ -19,7 +19,7 @@ The results for the runs with all the fossils are store in [All_Fossils](All_Fos
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
 - abstract: 200
 - intro: 500
-- mat/met: 700
+- mat/met: 700 (at the moment 479 words by Nick, needed ~150 words by Giobbe for mt-assembly and data collection)
 - res/disc: 800
 [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
 ## Introduction

@@ -17,6 +17,10 @@ The results for the runs with all the fossils are store in [All_Fossils](All_Fos
 - radarcharts for each clock model comparing the dating with/without Embioptera/Zoraptera are in [this](All_Fossils/Radarcharts.pdf) directory.
 # Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
+- abstract: 200
+- intro: 500
+- mat/met: 700
+- res/disc: 800
 [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
 ## Introduction
 - Grylloblattoidea and Mantophasmatoidea (what, where)

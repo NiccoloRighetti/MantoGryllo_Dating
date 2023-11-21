@@ -23,7 +23,6 @@ The results for the runs with all the fossils are store in [All_Fossils](All_Fos
 - mat/met: 700 (at the moment 479 words by Nick, needed ~150 words by Giobbe for mt-assembly and data collection)
 - res/disc: 800
 [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
-## Introduction
-- Grylloblattoidea and Mantophasmatoidea (what, where)
-- Gap of knowledge (timing unknown)  
+
+# Additional notes
 Topology reference: [Misof et al 2014](https://www.researchgate.net/profile/Guillem-Ylla/publication/322698687/figure/fig1/AS:614339941761024@1523481464078/Phylogenetic-tree-of-insects-modified-from-Misof-et-al-2014-The-Blattodea-branch.png).

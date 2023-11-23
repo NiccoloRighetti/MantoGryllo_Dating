@@ -222,7 +222,26 @@ for clock in {1..3}; do
 done
 ```
 ## Convergence check
-
+To extract all mcmc.txt files from the 5 runs with the 3 clocks:
+```
+# You should be in a directory with all run{1..5}_clock{1..3}:
+# Create directory for .txt files:
+mkdir txt_files
+# Rename and copy all mcmc.txt files from the 15 runs:
+for folder in run*_clock*/; do
+          run=$(echo "$folder" | grep -oP 'run\K\d+')
+          clock=$(echo "$folder" | grep -oP 'clock\K\d+')
+          source_file="${folder}mcmc.txt"
+          destination_file="txt_files/run${run}_clock${clock}_mcmc.txt"
+          cp "$source_file" "$destination_file"
+done
+# Move into the new directory, create one subdirectory for each clock model and copy the .txt files for each clock model into the respective folder:
+cd txt_files/
+mkdir clock{1..3}
+for i in {1..3}; do
+          mv run*clock"$i"* clock"$i";
+done
+```
 Convergence for the 5 runs of each model with and without the two groups has been checked through Tracer v1.7.2. After 20x10^6 generations with a burnin of 10% all runs reached convergence with ESS score >1000 in each node for every model, both with and without the groups.
 
 # Tree display and radarcharts

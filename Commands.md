@@ -248,4 +248,6 @@ Convergence for the 5 runs of each model with and without the two groups has bee
 One tree for each model with and without Embioptera and Zoraptera (a total of 6 trees) has been plotted through custom scripts.
 
 # Fossils Jackknife
-To check whether some prior calibrations bias the dating analysis, a jackknife of the fossils has been done by repeating the analysis 5 times, each time removing one fossil from the ```tree_calib.tre``` file.
+To check whether some prior calibrations bias the dating analysis, a jackknife of the fossils has been done by repeating the analysis 5 times, each time removing one fossil from the ```tree_calib.tre``` file. Since the dated phylogeny did not present differences between the datasets with and without Zoraptera and Embioptera, we decided to run the jackknife test only on the complete dataset.  
+We followed the same pipeline as the previous analyses, using the ```in.BV``` file already generated and running 5 independent runs for each jackknife with 20x10^6 generations and 10% burnin.  
+Convergence has been checked through Tracer and all trees have been plotted in R.

@@ -56,12 +56,12 @@ For the moment I do everything with the problematic species (always "with" direc
 List of the calibration points used in the dating analysis:
 | Species                    | Min age (Mya) | Max age (Mya) | Group  | Reference              | Id in Jackknife analysis
 |-----------------------------|-------------------|-------------------|---------------------|------------------------|-----|
-| Palaeotaeniopteryx elegans  | 268.3             | 411               | crown Plecoptera    | Sharov, 1961           | 1
-| Raphogla rubra              | 271.8             | 411               | crown Orthoptera    | Bethoux et al., 2002  | 2
-| Juramantis initialis        | 145               | 316               | crown Dictyoptera   | Vrsansky, 2002         | 4
-| Valditermes brennenae       | 130.3             | 325               | crown Isoptera      | Krishna et al., 2013   | 3
-| Echinosomiscus primoticus   | 98.2              | 411               | crown Phasmatodea   | Engel et al., 2016     | 5
-| Protoprosbole straeleni     | 319.9             | 521               | crown Neoptera      | Wolfe et al., 2014     | root
+| _Palaeotaeniopteryx elegans_  | 268.3             | 411               | crown Plecoptera    | Sharov, 1961           | 1
+| _Raphogla rubra_              | 271.8             | 411               | crown Orthoptera    | Bethoux et al., 2002  | 2
+| _Juramantis initialis_        | 145               | 316               | crown Dictyoptera   | Vrsansky, 2002         | 4
+| _Valditermes brennenae _      | 130.3             | 325               | crown Isoptera      | Krishna et al., 2013   | 3
+| _Echinosomiscus primoticus_   | 98.2              | 411               | crown Phasmatodea   | Engel et al., 2016     | 5
+| _Protoprosbole straeleni    _ | 319.9             | 521               | crown Neoptera      | Wolfe et al., 2014     | root
 
 
 ### Nucleotides

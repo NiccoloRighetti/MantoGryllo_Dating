@@ -1,0 +1,12 @@
+Summary Statistic	lnL
+mean	0.1884
+stderr of mean	1.3114E-4
+stdev	0.0384
+variance	1.4776E-3
+median	0.1838
+value range	[0.0734, 0.4957]
+geometric mean	0.1847
+95% HPD interval	[0.1214, 0.2661]
+auto-correlation time (ACT)	1047.5876
+effective sample size (ESS)	85916.4
+number of samples	90005

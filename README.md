@@ -1,5 +1,4 @@
-![image](https://github.com/NiccoloRighetti/MantoGryllo_Dating/assets/129380147/045f1cf8-fe2b-48ef-97d7-0b9940997c9b)# MantoGryllo_Dating
-Dated Phylogeny of Mantophasmatodea and Grylloblattodea
+# Dated Phylogeny of Mantophasmatodea and Grylloblattodea
 ## Workflow
 1) Dating through 5 runs of MCMCtree.
 2) 5 runs with Embioptera and Zoraptera, 5 runs without them. List of species to be removed:
@@ -20,7 +19,7 @@ The results for the runs with all the fossils are stored in [All_Fossils](All_Fo
 The same folder structure has been kept for the Jackknife analysis: [No_1](No_1),[No_2](No_2),[No_3](No_3),[No_4](No_4),[No_5](No_5).  
 The radarchart plot with the jackknife can be found [here](Radarcharts_Jackknife/Jackknife_plot.pdf).
 
-# Paper draft
+## Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
 - abstract: 200 (at the moment 175 words by Nick)
 - intro: 500
@@ -28,5 +27,5 @@ The radarchart plot with the jackknife can be found [here](Radarcharts_Jackknife
 - res/disc: 800
 [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
 
-# Additional notes
+## Additional notes
 Topology reference: [Misof et al 2014](https://www.researchgate.net/profile/Guillem-Ylla/publication/322698687/figure/fig1/AS:614339941761024@1523481464078/Phylogenetic-tree-of-insects-modified-from-Misof-et-al-2014-The-Blattodea-branch.png).

@@ -12,6 +12,8 @@ conda activate phylocon
 - Raxml-ng
 - Modeltest-ng
 - Amas
+- R
+- Tracer
 ## Sequence preparation
 Remotion of gaps:
 ```

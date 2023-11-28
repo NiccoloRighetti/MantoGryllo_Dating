@@ -2,7 +2,7 @@
 
 This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results.
 
-## 1. Long Branch Attraction Bias Analysis
+## 1. Long Branch Attraction possibly biases dating analyses
 
 To investigate potential long-branch attraction bias, nucleotide alignments were analyzed twice: once including Embioptera and Zoraptera, and once excluding them. The following species were systematically removed from the analyses:
 

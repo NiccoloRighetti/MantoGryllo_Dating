@@ -1,16 +1,35 @@
 # Dated Phylogeny of Mantophasmatodea and Grylloblattodea
 ## Workflow
-1) Dating through 5 runs of MCMCtree.
-2) 5 runs with Embioptera and Zoraptera, 5 runs without them. List of species to be removed:
-  - _Aposthonia borneensis_
-  - _Aposthonia japonica_
-  - _Eosembia sp._
-  - _Zorotypus medoensis_
-  - _Challia fletcheri_
-  - _Euborellia arcanum_
-3) Jacknife of fossils, they are 5. Every time I remove one of them, 5 runs each. I do this with the three clock models implemented in MCMCtree. 
-4) Total number of MCMCtree runs is 6x5x3 with Embioptera and Zoraptera and 6x5x3 without them.
+# Dating Polyneoptera Phylogeny Using MCMCtree: Four Sensitivity Tests
 
+This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results.
+
+### 1. Long Branch Attraction Bias Analysis
+
+To investigate potential long-branch attraction bias, nucleotide alignments were analyzed twice: once including Embioptera and Zoraptera, and once excluding them. The following species were systematically removed from the analyses:
+
+- *Aposthonia borneensis*
+- *Aposthonia japonica*
+- *Eosembia sp.*
+- *Zorotypus medoensis*
+- *Challia fletcheri*
+- *Euborellia arcanum*
+
+### 2. Fossil Prior Influence - Fossils Jackknife
+
+To assess the impact of individual fossils on dating analyses, a fossils jackknife approach was employed. Each of the five fossils was systematically removed, and five runs were conducted for each scenario. This analysis was performed under all three clock models implemented in MCMCtree.
+
+### 3. Clock Model Sensitivity Analysis
+
+Exploring the influence of different clock models, analyses were conducted using all three clock models implemented in MCMCtree. This investigation aims to determine whether the choice of clock model affects the dating results.
+
+### 4. Amino Acids vs. Nucleotides Dating Analysis
+
+To assess potential disparities in dating and confidence interval estimates, an analysis was conducted using amino acid alignments. This analysis utilized the complete set of fossils for calibration.
+
+These sensitivity tests provide a comprehensive understanding of the factors influencing the dating analyses, including the impact of specific taxa, fossils, clock models, and the choice of molecular data type (nucleotides vs. amino acids). The results contribute valuable insights into the robustness and reliability of dating estimates within the context of Polyneoptera phylogeny.
+
+## Folder structure and results storage
 The results for the runs with all the fossils are stored in [All_Fossils](All_Fossils), there you can find:
 - the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera (20x10^6 gen with 10% burnin);
 - the trees in .pdf for each model with and without Embioptera and Zoraptera are in [this](All_Fossils/Trees.pdf) directory;

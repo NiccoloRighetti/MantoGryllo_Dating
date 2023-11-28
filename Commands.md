@@ -255,10 +255,83 @@ done
 ```
 Convergence for the 5 runs of each model with and without the two groups has been checked through Tracer v1.7.2. After 20x10^6 generations with a burnin of 10% all runs reached convergence with ESS score >1000 in each node for every model, both with and without the groups.
 
-# Tree display and radarcharts
+### Tree display and radarcharts
 One tree for each model with and without Embioptera and Zoraptera (a total of 6 trees) has been plotted through custom scripts.
 
-# Fossils Jackknife
+# Fossils Jackknife sensitivity check
 To check whether some prior calibrations bias the dating analysis, a jackknife of the fossils has been done by repeating the analysis 5 times, each time removing one fossil from the ```tree_calib.tre``` file. Since the dated phylogeny did not present differences between the datasets with and without Zoraptera and Embioptera, we decided to run the jackknife test only on the complete dataset.  
 We followed the same pipeline as the previous analyses, using the ```in.BV``` file already generated and running 5 independent runs for each jackknife with 20x10^6 generations and 10% burnin.  
 Convergence has been checked through Tracer and all trees have been plotted in R.
+
+
+# Aminoacids sensitivity check
+Fasta to Phylip through Aliview: ```concat_with_phy```.  
+Tree is already in Newick format: ```ultrametric_na.tree```.  
+1. CALCULATE RATE PRIOR IN R
+```
+# Needed libraries:
+library( rstudioapi )
+library( phytools )
+# Ultrametric tree import: 
+raw_tt <- ape::read.tree( file = "phylo_with.tree.raxml.bestTree" )
+# Rate estimation:
+tree_height <- max( phytools::nodeHeights( raw_tt ) )  # 3.036682
+root_age <- 5.21  # from Wolfe et al., 2014 (crown Neoptera)
+mean_rate <- tree_height / root_age # 0.5828564 subst/site per time unit
+alpha <- 2
+beta <- alpha/mean_rate  # 3.431377
+```
+2. BASEML FOR HESSIAN ESTIMATION
+```prebaseml.txt``` file:
+```
+          seed = -1
+       seqfile = concat_with.phy
+      treefile = tree_uncalib.tree
+      mcmcfile = mcmc.txt
+       outfile = out.txt
+
+         ndata = 1
+       seqtype = 2    * 0: nucleotides; 1:codons; 2:AAs
+       usedata = 3    * 0: no data (prior); 1:exact likelihood;
+                      * 2:approximate likelihood; 3:out.BV (in.BV)
+         clock = 1    * 1: global clock; 2: independent rates; 3: correlated rates
+
+         model = 4    * 0:JC69, 1:K80, 2:F81, 3:F84, 4:HKY85
+         alpha = 2  * alpha for gamma rates at sites
+         ncatG = 5    * No. categories in discrete gamma
+
+     cleandata = 0    * remove sites with ambiguity data (1:yes, 0:no)?
+
+       BDparas = 1 1 0.1    * birth, death, sampling
+
+   rgene_gamma = 2 343   * gammaDir prior for rate for genes
+  sigma2_gamma = 1 10  * gammaDir prior for sigma^2     (for clock=2 or 3)
+
+         print = 1       * 0: no mcmc sample; 1: everything except branch rates 2: everything
+        burnin = 100000
+      sampfreq = 1000
+       nsample = 20000
+```
+From ultrametric tree to uncalibrated tree (also add by hand n° of sequences and number of trees in the first row):
+```
+sed 's/:[0-9.]*//g' ultrametric_na.tree.new > tree_uncalib.tree
+```
+Now i run mcmctree to create the input file for codeml (since it's an AAs alignment we need codeml instead of baseml):
+```
+mcmctree prepbaseml.txt
+```
+I stop it as I see “counting frequencies…”.  
+I change method to 1 and alpha to 2.  
+I run codeml:
+```
+sed -i 's/method = 0/method = 1/; s/alpha = 0.5/alpha = 2/; s/model = 4/model = 0/' tmp0001.ctl
+codeml tmp0001.ctl
+mv rst2 in.BV
+```
+I modify the .ctl file (uncalib_tree -> calib_tree) and create input files for the three clock model (1,2,3).
+```
+sed 's/usedata = 3/usedata = 2 in.BV 1/; s/tree_uncalib.tree/tree_calib.tree/' prepbaseml.txt > truemcmctree.ctl
+sed -i 's/concat_with.phy/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmctree\/with\/aa\/input_data\/concat_with.phy/' truemcmctree.ctl
+sed -i 's/tree_calib.tree/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmctree\/with\/aa\/input_data\/tree_calib.tree/' truemcmctree.ctl
+sed -i 's/in.BV/\/home\/STUDENTI\/niccolo.righetti\/MantoGryllo\/analyses\/mcmctree\/with\/aa\/input_data\/in.BV/' truemcmctree.ctl
+```

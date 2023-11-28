@@ -1,10 +1,8 @@
-# Dated Phylogeny of Mantophasmatodea and Grylloblattodea
-## Workflow
 # Dating Polyneoptera Phylogeny Using MCMCtree: Four Sensitivity Tests
 
 This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results.
 
-### 1. Long Branch Attraction Bias Analysis
+## 1. Long Branch Attraction Bias Analysis
 
 To investigate potential long-branch attraction bias, nucleotide alignments were analyzed twice: once including Embioptera and Zoraptera, and once excluding them. The following species were systematically removed from the analyses:
 
@@ -15,15 +13,15 @@ To investigate potential long-branch attraction bias, nucleotide alignments were
 - *Challia fletcheri*
 - *Euborellia arcanum*
 
-### 2. Fossil Prior Influence - Fossils Jackknife
+## 2. Fossil Prior Influence - Fossils Jackknife
 
 To assess the impact of individual fossils on dating analyses, a fossils jackknife approach was employed. Each of the five fossils was systematically removed, and five runs were conducted for each scenario. This analysis was performed under all three clock models implemented in MCMCtree.
 
-### 3. Clock Model Sensitivity Analysis
+## 3. Clock Model Sensitivity Analysis
 
 Exploring the influence of different clock models, analyses were conducted using all three clock models implemented in MCMCtree. This investigation aims to determine whether the choice of clock model affects the dating results.
 
-### 4. Amino Acids vs. Nucleotides Dating Analysis
+## 4. Amino Acids vs. Nucleotides Dating Analysis
 
 To assess potential disparities in dating and confidence interval estimates, an analysis was conducted using amino acid alignments. This analysis utilized the complete set of fossils for calibration.
 

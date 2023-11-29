@@ -43,6 +43,9 @@ The results of the runs with the AAs alignment can be found in [All_Fossils_AAs]
 - abstract: 200 (at the moment 175 words by Nick)
 - intro: 500
 - mat/met: 700 (at the moment 479 words by Nick, needed ~150 words by Giobbe for mt-assembly and data collection)
+
+https://www.sciencedirect.com/journal/molecular-phylogenetics-and-evolution
+
 - res/disc: 800
 [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
 

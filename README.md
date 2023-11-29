@@ -35,7 +35,8 @@ The results for the runs with all the fossils are stored in [All_Fossils](All_Fo
 
 The same folder structure has been kept for the Jackknife analysis: [No_1](No_1),[No_2](No_2),[No_3](No_3),[No_4](No_4),[No_5](No_5).  
 The radarchart plot with the jackknife can be found [here](Radarcharts_Jackknife/).  
-All scripts can be found [here](Bash_Scripts).
+All scripts can be found [here](Bash_Scripts).  
+The results of the runs with the AAs alignment can be found in [All_Fossils_AAs](All_fossils_AAs).  
 
 ## Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  

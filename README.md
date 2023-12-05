@@ -1,8 +1,9 @@
-# Dating Polyneoptera Phylogeny Using MCMCtree: Four Sensitivity Tests
+# Dating Polyneoptera Phylogeny Using MCMCtree
 
-This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results.
+This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results: two of them tested the dataset, while the others tested the priors.
 
-## 1. Long Branch Attraction possibly biases dating analyses
+## Testing the Dataset
+### 1a. Long Branch Attraction possibly biases dating analyses
 
 To investigate potential long-branch attraction bias, nucleotide alignments were analyzed twice: once including Embioptera and Zoraptera, and once excluding them. The following species were systematically removed from the analyses:
 
@@ -13,17 +14,19 @@ To investigate potential long-branch attraction bias, nucleotide alignments were
 - *Challia fletcheri*
 - *Euborellia arcanum*
 
-## 2. Fossil Prior Influence - Fossils Jackknife
+### 1b. Amino Acids vs. Nucleotides Dating Analysis
+
+To assess potential disparities in dating and confidence interval estimates, an analysis was conducted using amino acid alignments. This analysis utilized the complete set of fossils for calibration.
+
+## Testing the Priors
+
+### 2a. Fossil Prior Influence - Fossils Jackknife
 
 To assess the impact of individual fossils on dating analyses, a fossils jackknife approach was employed. Each of the five fossils was systematically removed, and five runs were conducted for each scenario. This analysis was performed under all three clock models implemented in MCMCtree.
 
-## 3. Clock Model Sensitivity Analysis
+## 2b. Clock Model Sensitivity Analysis
 
 Exploring the influence of different clock models, analyses were conducted using all three clock models implemented in MCMCtree. This investigation aims to determine whether the choice of clock model affects the dating results.
-
-## 4. Amino Acids vs. Nucleotides Dating Analysis
-
-To assess potential disparities in dating and confidence interval estimates, an analysis was conducted using amino acid alignments. This analysis utilized the complete set of fossils for calibration.
 
 These sensitivity tests provide a comprehensive understanding of the factors influencing the dating analyses, including the impact of specific taxa, fossils, clock models, and the choice of molecular data type (nucleotides vs. amino acids). The results contribute valuable insights into the robustness and reliability of dating estimates within the context of Polyneoptera phylogeny.
 
@@ -44,10 +47,7 @@ The results of the runs with the AAs alignment can be found in [All_Fossils_AAs]
 - intro: 500
 - mat/met: 700 (at the moment 479 words by Nick, needed ~150 words by Giobbe for mt-assembly and data collection)
 
-https://www.sciencedirect.com/journal/molecular-phylogenetics-and-evolution
-
-- res/disc: 800
-[Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
-
-## Additional notes
-Topology reference: [Misof et al 2014](https://www.researchgate.net/profile/Guillem-Ylla/publication/322698687/figure/fig1/AS:614339941761024@1523481464078/Phylogenetic-tree-of-insects-modified-from-Misof-et-al-2014-The-Blattodea-branch.png).
+## Usefull Links:
+- [Link](https://www.sciencedirect.com/journal/molecular-phylogenetics-and-evolution) to Molecular Phylogenetics and Evolution.
+- [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
+- Topology reference from [Misof et al 2014](https://www.researchgate.net/profile/Guillem-Ylla/publication/322698687/figure/fig1/AS:614339941761024@1523481464078/Phylogenetic-tree-of-insects-modified-from-Misof-et-al-2014-The-Blattodea-branch.png).

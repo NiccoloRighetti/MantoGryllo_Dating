@@ -52,4 +52,3 @@ The results of the runs with the AAs alignment can be found in [All_Fossils_AAs]
 ## Usefull Links:
 - [Link](https://www.sciencedirect.com/journal/molecular-phylogenetics-and-evolution) to Molecular Phylogenetics and Evolution.
 - [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.
-- Topology reference from [Misof et al 2014](https://www.researchgate.net/profile/Guillem-Ylla/publication/322698687/figure/fig1/AS:614339941761024@1523481464078/Phylogenetic-tree-of-insects-modified-from-Misof-et-al-2014-The-Blattodea-branch.png).

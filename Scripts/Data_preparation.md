@@ -5,7 +5,7 @@ This pipeline has been applied to the amino acids alignment as well (with the ne
 - TrimAl
 - AMAS.py
 - Aliview
-
+## Commands
 Remotion of gaps:
 ```
 sed -i 's/-//g' *

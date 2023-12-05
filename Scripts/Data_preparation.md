@@ -1,4 +1,4 @@
-# Commands to prepare the datasets for the analyses
+# Commands to prepare the Datasets for the Analyses
 This pipeline has been applied to the amino acids alignment as well (with the needed changes in input file formats).
 ## Needed programs
 - MAFFT

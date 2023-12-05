@@ -26,7 +26,7 @@ To assess potential disparities in dating and confidence interval estimates, an 
 
 To assess the impact of individual fossils on dating analyses, a fossils jackknife approach was employed. Each of the five fossils was systematically removed, and five runs were conducted for each scenario. This analysis was performed under all three clock models implemented in MCMCtree.
 
-## 2b. Clock Model Sensitivity Analysis
+### 2b. Clock Model Sensitivity Analysis
 
 Exploring the influence of different clock models, analyses were conducted using all three clock models implemented in MCMCtree. This investigation aims to determine whether the choice of clock model affects the dating results.
 

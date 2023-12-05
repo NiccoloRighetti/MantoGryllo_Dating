@@ -1,7 +1,11 @@
 # Dating Polyneoptera Phylogeny Using MCMCtree
 
 This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results: two of them tested the dataset, while the others tested the priors.  
-![Workflow](Workflow.png)
+
+<div align="center" style="background-color:white">
+    <img src="Workflow.png" alt="Workflow">
+</div>
+
 ## 1. Testing the Dataset
 ### 1a. Long Branch Attraction possibly biases dating analyses
 

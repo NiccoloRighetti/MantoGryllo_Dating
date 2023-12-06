@@ -34,11 +34,11 @@ These sensitivity tests provide a comprehensive understanding of the factors inf
 
 ## Folder structure and results storage
 All [scripts and commands](Scripts) can be found as follows:  
-  0. Mitochondrial assembly and annotation (TO BE ADDED BY GIOBBE).  
-  [1.](Scripts/Data_preparation.md) Alignment preparation.  
-  [2.](Scripts/Phylogenetic_inference) Phylogenetic inference.  
-  [3.](Scripts/MCMCtree.md) MCMCtree dating analysis.  
-  4. R plots (TO BE ADDED BY NICCOLO').  
+    0. Mitochondrial assembly and annotation (TO BE ADDED BY GIOBBE).  
+    [1.](Scripts/Data_preparation.md) Alignment preparation.  
+    [2.](Scripts/Phylogenetic_inference) Phylogenetic inference.  
+    [3.](Scripts/MCMCtree.md) MCMCtree dating analysis.  
+    4. R plots (TO BE ADDED BY NICCOLO').  
 The results for the runs with all the fossils are stored in [All_Fossils](All_Fossils), there you can find:
 - the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera (20x10^6 gen with 10% burnin);
 - the trees in .pdf for each model with and without Embioptera and Zoraptera are in [this](All_Fossils/Trees.pdf) directory;

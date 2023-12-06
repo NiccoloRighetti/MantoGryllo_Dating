@@ -19,18 +19,22 @@ List of the calibration points used in the dating analysis:
 Fasta to Phylip through Aliview: ```concat_with_phy```.  
 Tree is already in Newick format: ```ultrametric_na.tree```.  
 1. CALCULATE RATE PRIOR IN R
-```
+## 1. Calculate Rate Prior in R
+
+```R
 # Needed libraries:
-library( rstudioapi )
-library( phytools )
+library(rstudioapi)
+library(phytools)
+
 # Ultrametric tree import:
-raw_tt <- ape::read.tree( file = "fna_tree.new" )
+raw_tt <- ape::read.tree(file = "fna_tree.new")
+
 # Rate estimation:
-tree_height <- max( phytools::nodeHeights( raw_tt ) )  # 2.547035
+tree_height <- max(phytools::nodeHeights(raw_tt))  # 2.547035
 root_age <- 5.21  # from Wolfe et al., 2014 (crown Neoptera)
-mean_rate <- tree_height / root_age # 0.4888743 subst/site per time unit
+mean_rate <- tree_height / root_age  # 0.4888743 subst/site per time unit
 alpha <- 2
-beta <- alpha/mean_rate  # 4.091031
+beta <- alpha / mean_rate  # 4.091031
 ```
 2. BASEML FOR HESSIAN ESTIMATION
 ```prebaseml.ctl``` file:

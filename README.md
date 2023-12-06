@@ -33,11 +33,11 @@ Exploring the influence of different clock models, analyses were conducted using
 These sensitivity tests provide a comprehensive understanding of the factors influencing the dating analyses, including the impact of specific taxa, fossils, clock models, and the choice of molecular data type (nucleotides vs. amino acids). The results contribute valuable insights into the robustness and reliability of dating estimates within the context of Polyneoptera phylogeny.
 
 ## Folder structure and results storage
-All [scripts and commands](Scripts) can be found as follows:
-  0. Mitochondrial assembly and annotation (TO BE ADDED BY GIOBBE).
-  [1.](Scripts/Data_preparation.md) Alignment preparation.
-  [2.](Scripts/Phylogenetic_inference) Phylogenetic inference.
-  [3.](Scripts/MCMCtree.md) MCMCtree dating analysis.
+All [scripts and commands](Scripts) can be found as follows:  
+  0. Mitochondrial assembly and annotation (TO BE ADDED BY GIOBBE).  
+  [1.](Scripts/Data_preparation.md) Alignment preparation.  
+  [2.](Scripts/Phylogenetic_inference) Phylogenetic inference.  
+  [3.](Scripts/MCMCtree.md) MCMCtree dating analysis.  
   4. R plots (TO BE ADDED BY NICCOLO').  
 The results for the runs with all the fossils are stored in [All_Fossils](All_Fossils), there you can find:
 - the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera (20x10^6 gen with 10% burnin);

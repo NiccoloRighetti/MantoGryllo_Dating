@@ -39,6 +39,7 @@ All scripts and commands can be found as follows:
 3. [Phylogenetic inference](Scripts/Phylogenetic_inference).
 4. [MCMCtree dating analysis](Scripts/MCMCtree.md).
 5. R plots (TO BE ADDED BY NICCOLO').
+
 The results for the runs with all the fossils are stored in [All_Fossils](All_Fossils), there you can find:
 - the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera (20x10^6 gen with 10% burnin);
 - the trees in .pdf for each model with and without Embioptera and Zoraptera are in [this](All_Fossils/Trees.pdf) directory;

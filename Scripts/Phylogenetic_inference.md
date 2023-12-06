@@ -8,11 +8,11 @@ The constraint topology was taken from [Misof et al 2014](https://www.researchga
 
 ## Commands
 Model selection with modeltest-ng (v0.1.6):
-```
+```sh
 modeltest-ng -d nt -i ../../../../../data/trimmed_concat_na/with/concat_with.fa -q ../../../../../data/trimmed_concat_na/with/partitions.txt -o ./modeltest_with
 ```
 I use the file modeltest_with.part.aicc.  
 Maximum Likelihood phylogeny with RAxML (v8.2.12):
-```
+```sh
 raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./phylo_with.tree --all --bs-trees 100 --model ../../modeltest/aa/modeltest_with.part.aicc -tree-constraint ../../../../data/topology_constraint/with_group.tree
 ```

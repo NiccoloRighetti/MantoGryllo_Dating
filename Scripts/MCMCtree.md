@@ -170,4 +170,4 @@ done
 ```
 Convergence for the 5 runs of each model with and without the two groups has been checked through Tracer v1.7.2.
 
-All the results have been plotted through custom R scripts shown [here](Scripts/Plots.R).
+All the results have been plotted through custom R scripts shown [here](Plots.R).

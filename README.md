@@ -33,7 +33,7 @@ Exploring the influence of different clock models, analyses were conducted using
 These sensitivity tests provide a comprehensive understanding of the factors influencing the dating analyses, including the impact of specific taxa, fossils, clock models, and the choice of molecular data type (nucleotides vs. amino acids). The results contribute valuable insights into the robustness and reliability of dating estimates within the context of Polyneoptera phylogeny.
 
 ## Folder structure and results storage
-All scripts and commands can be found as follows:  
+All scripts and commands can be found [here](Scripts) as follows:  
 1. Mitochondrial assembly and annotation (TO BE ADDED BY GIOBBE).
 2. [Alignment preparation](Scripts/Data_preparation.md).
 3. [Phylogenetic inference](Scripts/Phylogenetic_inference).

@@ -36,4 +36,4 @@ AMAS.py concat -i ../../trimm_na_ol/with/* -f fasta -d dna --concat-out ./concat
 ```
 
 ---
-1/[2](Data_preparation.md)/[3](Phylogenetic_inference.md)/[4](MCMCtree.md)/[5](Plots.R)
+[Main](../README.md)/1/[2](Data_preparation.md)/[3](Phylogenetic_inference.md)/[4](MCMCtree.md)/[5](Plots.R)

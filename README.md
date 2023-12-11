@@ -35,7 +35,7 @@ These sensitivity tests provide a comprehensive understanding of the factors inf
 ## Folder structure and results storage
 All scripts and commands can be found [here](Scripts) as follows:  
 1. Mitochondrial assembly and annotation (TO BE ADDED BY GIOBBE).
-2. [Alignment preparation](Scripts/Data_preparation.md).
+2. [Data preparation](Scripts/Data_preparation.md).
 3. [Phylogenetic inference](Scripts/Phylogenetic_inference).
 4. [MCMCtree dating analysis](Scripts/MCMCtree.md).
 5. [R plots](Scripts/Plots.R).

@@ -40,10 +40,10 @@ All scripts and commands can be found [here](Scripts) as follows:
 4. [MCMCtree dating analysis](Scripts/MCMCtree.md).
 5. [R plots](Scripts/Plots.R).
 
-The results for the runs with all the fossils are stored in [All_Fossils](All_Fossils), there you can find:
+The results for the runs with all the fossils are stored in [All_Fossils](All_Fossils_NTs), there you can find:
 - the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera (20x10^6 gen with 10% burnin);
-- the trees in .pdf for each model with and without Embioptera and Zoraptera are in [this](All_Fossils/Trees.pdf) directory;
-- radarcharts for each clock model comparing the dating with/without Embioptera/Zoraptera are in [this](All_Fossils/Radarcharts.pdf) directory.
+- the trees in .pdf for each model with and without Embioptera and Zoraptera are in [this](All_Fossils_NTs/Trees.pdf) directory;
+- radarcharts for each clock model comparing the dating with/without Embioptera/Zoraptera are in [this](All_Fossils_NTs/Radarcharts.pdf) directory.
 
 The same folder structure has been kept for the Jackknife analysis: [No_1](No_1),[No_2](No_2),[No_3](No_3),[No_4](No_4),[No_5](No_5).  
 The radarchart plot with the jackknife can be found [here](Radarcharts_Jackknife/).  

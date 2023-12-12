@@ -1,4 +1,4 @@
-# Mitochondrial phylogenomics supports a Carboniferous origin of Xononomia
+# Mitochondrial phylogenomics supports a Carboniferous origin of Xenonomia
 
 This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree, with a focus on Xenonomia. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results: two of them tested the dataset, while the others tested the priors.  
 

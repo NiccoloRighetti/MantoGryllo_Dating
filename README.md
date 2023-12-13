@@ -46,8 +46,8 @@ All scripts and commands can be found [here](Scripts) as follows:
 
 The results for the runs with all the fossils are stored in [All_Fossils_NTs](All_Fossils_NTs), there you can find:
 - the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera+Dermaptera (20x10^6 gen with 10% burnin);
-- the trees in .pdf for each model with and without Embioptera and Zoraptera are in [this](All_Fossils_NTs/Trees.pdf) directory;
-- radarcharts for each clock model comparing the dating with/without Embioptera/Zoraptera are in [this](All_Fossils_NTs/Radarcharts.pdf) directory.
+- the trees in .pdf for each model with and without Embioptera and Zoraptera+Dermaptera are in [this](All_Fossils_NTs/Trees.pdf) directory;
+- radarcharts for each clock model comparing the dating with and without Embioptera and Zoraptera+Dermaptera are in [this](All_Fossils_NTs/Radarcharts.pdf) directory.
 
 The same folder structure has been kept for the Jackknife analysis: [No_1](No_1),[No_2](No_2),[No_3](No_3),[No_4](No_4),[No_5](No_5).  
 The radarchart plot with the jackknife can be found [here](Radarcharts_Jackknife/).  
@@ -57,7 +57,7 @@ The results of the runs with the AAs alignment can be found in [All_Fossils_AAs]
 ## Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
 - abstract: 200 (at the moment 188 words)
-- intro: 500 (at the moment 511 words)
+- intro: 500 (at the moment 506 words)
 - mat/met: 700 (at the moment 628 words)
 - res/disc: 423
 - conc:

@@ -56,11 +56,12 @@ The results of the runs with the AAs alignment can be found in [All_Fossils_AAs]
 
 ## Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
-- abstract: 200 (at the moment 175 words by Nick)
-- intro: 500 (at the moment 499 words by Nick)
-- mat/met: 700 (at the moment 543 words by Nick, needed ~150 words by Giobbe for mt-assembly and data collection)
+- abstract: 200 (at the moment 188 words)
+- intro: 500 (at the moment 511 words)
+- mat/met: 700 (at the moment 628 words)
 - res/disc:
 - conc:
+- pictures: (at the moment 267 words)
 
 ## Usefull Links:
 - [Link](https://www.sciencedirect.com/journal/molecular-phylogenetics-and-evolution) to Molecular Phylogenetics and Evolution.

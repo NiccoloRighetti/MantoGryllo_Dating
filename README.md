@@ -11,7 +11,7 @@ This project aims to explore the robustness and sensitivity of molecular dating 
 ## 1. Testing the Dataset
 ### 1a. Long Branch Attraction possibly biases dating analyses
 
-To investigate potential long-branch attraction bias, nucleotide alignments were analyzed twice: once including Embioptera and Zoraptera, and once excluding them. The following species were systematically removed from the analyses:
+To investigate potential long-branch attraction bias, nucleotide alignments were analyzed twice: once including Embioptera and Zoraptera+Dermaptera, and once excluding them. The following species were systematically removed from the analyses:
 
 - *Aposthonia borneensis*
 - *Aposthonia japonica*
@@ -45,7 +45,7 @@ All scripts and commands can be found [here](Scripts) as follows:
 5. [R plots](Scripts/Plots.R).
 
 The results for the runs with all the fossils are stored in [All_Fossils_NTs](All_Fossils_NTs), there you can find:
-- the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera (20x10^6 gen with 10% burnin);
+- the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera+Dermaptera (20x10^6 gen with 10% burnin);
 - the trees in .pdf for each model with and without Embioptera and Zoraptera are in [this](All_Fossils_NTs/Trees.pdf) directory;
 - radarcharts for each clock model comparing the dating with/without Embioptera/Zoraptera are in [this](All_Fossils_NTs/Radarcharts.pdf) directory.
 

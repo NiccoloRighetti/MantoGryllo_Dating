@@ -59,7 +59,7 @@ The results of the runs with the AAs alignment can be found in [All_Fossils_AAs]
 - abstract: 200 (at the moment 188 words)
 - intro: 500 (at the moment 511 words)
 - mat/met: 700 (at the moment 628 words)
-- res/disc:
+- res/disc: 423
 - conc:
 - pictures: (at the moment 267 words)
 

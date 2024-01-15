@@ -15,7 +15,6 @@ for (package in required_packages) {
   library(package, character.only = TRUE)
 }
 
-# Optional: Display a message indicating successful loading of packages
 cat("All required packages have been successfully installed and loaded.\n")\
 
 

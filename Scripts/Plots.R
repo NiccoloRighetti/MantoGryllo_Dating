@@ -2,21 +2,19 @@
 # Here you can find the commands to plot one single tree (the one we displayed in the paper) and to plot the other main figures.
 
 # List of required packages
-required_packages <- c(
-  "MCMCtreeR", "readr", "ape", "scales", "ggplot2", 
-  "tm", "gridExtra", "fmsb", "devtools", "ggradar", "cowplot", "dplyr"
-)
-
-# Install and load packages
-for (package in required_packages) {
-  if (!requireNamespace(package, quietly = TRUE)) {
-    install.packages(package, dependencies = TRUE)
-  }
-  library(package, character.only = TRUE)
-}
-
-cat("All required packages have been successfully installed and loaded.\n")\
-
+# Needed packages
+library(MCMCtreeR, quietly = TRUE, warn.conflicts = FALSE)
+library(readr)
+library(ape)
+library(scales)
+library(ggplot2)
+library(tm)
+library(gridExtra)
+library(fmsb)
+library(devtools)
+library(ggradar)
+library(cowplot)
+library(dplyr)
 
 # TREE PLOT
 # To plot another tree, just copy and paste the nexus line inside the first row of code

@@ -1,6 +1,8 @@
 # Mitochondrial phylogenomics supports a Carboniferous origin of Xenonomia
 
-This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree, with a focus on Xenonomia. Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results: two of them tested the dataset, while the others tested the priors.  
+This project aims to explore the robustness and sensitivity of molecular dating analyses within the Polyneoptera phylogeny using MCMCtree, with a focus on Xenonomia.\
+RNA-Seq reads from two Grylloblattodea and two Mantophasmatodea species were used to assemble mitogenomes via a target-assembly approach, starting with two Xenonomia mitogenomes as references.\
+Four distinct sensitivity tests were conducted to scrutinize key aspects influencing the dating results: two of them tested the dataset, while the others tested the priors.  
 
 <div align="center">
   <img src="Images/rollover1.jpg" alt="Grylloblattodea" width="300"/>
@@ -44,6 +46,8 @@ All scripts and commands can be found [here](Scripts) as follows:
 4. [MCMCtree dating analysis](Scripts/MCMCtree.md).
 5. [R plots](Scripts/Plots.R).
 
+Mitogenome assemblies of the four "new" species in .genbank format are available in [Assembly](Assembly).
+
 The results for the runs with all the fossils are stored in [All_Fossils_NTs](All_Fossils_NTs), there you can find:
 - the [lnL stats](All_Fossils/lnL) for convergence of 5 runs for each model with and without Embioptera and Zoraptera+Dermaptera (20x10^6 gen with 10% burnin);
 - the trees in .pdf for each model with and without Embioptera and Zoraptera+Dermaptera are in [this](All_Fossils_NTs/Trees.pdf) directory;
@@ -56,13 +60,3 @@ The results of the runs with the AAs alignment can be found in [All_Fossils_AAs]
 
 ## Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  
-- abstract: 200 (at the moment 188 words)
-- intro: 500 (at the moment 506 words)
-- mat/met: 700 (at the moment 628 words)
-- res/disc: 423
-- conc:
-- pictures: (at the moment 267 words)
-
-## Usefull Links:
-- [Link](https://www.sciencedirect.com/journal/molecular-phylogenetics-and-evolution) to Molecular Phylogenetics and Evolution.
-- [Link](https://resjournals.onlinelibrary.wiley.com/journal/13653113) to Systematic Entomology online page.

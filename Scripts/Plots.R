@@ -75,15 +75,15 @@ colnames(all_data_clock1)<-c("group","Grylloblattodea","Mantophasmatodea","Gryll
 pdf("mcmctree_outputs/All_Fossils/Radarcharts.pdf/allfossils_clock1.pdf", width = 11.7, height = 8.3)
 ggradar(
   all_data_clock1[], 
-  values.radar = c("0", "2.52", "5.5"),
-  grid.min = 0, grid.mid = 2.52, grid.max = 5.5,
+  values.radar = c("0", "2.52", "5.5"), # to plot the blue cirle of the Triassic-Jurassic mass extinction substitute 2.52 with 2.01
+  grid.min = 0, grid.mid = 2.52, grid.max = 5.5, # same here
   # Polygons
   group.line.width = 1, 
   group.point.size = 4,
   group.colours = c("#552583", "#FDB927"),
   # Background and grid lines
   background.circle.colour = "white",
-  gridline.mid.colour = "firebrick1",
+  gridline.mid.colour = "firebrick1", # and here firebrick1 with blue
   legend.position = "bottom"
 )
 dev.off()

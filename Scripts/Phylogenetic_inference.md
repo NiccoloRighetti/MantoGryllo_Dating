@@ -20,4 +20,4 @@ raxml-ng -msa ../../../../data/trimmed_concat_na/with/concat_with.fa --prefix ./
 
 
 ---
-[Main](../README.md)/1/[2](Data_preparation.md)/[3](Phylogenetic_inference.md)/[4](MCMCtree.md)/[5](Plots.R)
+[Main](../README.md)/[1](Data_preparation.md)/[2](Phylogenetic_inference.md)/[3](MCMCtree.md)/[4](Plots.R)

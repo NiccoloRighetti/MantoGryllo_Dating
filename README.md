@@ -57,6 +57,6 @@ The same folder structure has been kept for the Jackknife analysis: [No_1](No_1)
 The radarchart plot with the jackknife can be found [here](Radarcharts_Jackknife/).  
 All scripts can be found [here](Bash_Scripts).  
 The results of the runs with the AAs alignment can be found in [All_Fossils_AAs](All_fossils_AAs), with the same subdirectories structure as the nt directory and with [radarcharts](All_fossils_AAs/Radarcharts.pdf/) comparing nt and AA results for the groups of interest.  
-
+All ML trees can be found [here]{All_Trees_Supp/All_ML_Trees_Supp.pdf}, and dated trees can be found [here]{All_Trees_Supp/All_Dated_Trees_Supp.pdf}
 ## Paper draft
 [Link](https://docs.google.com/document/d/1J3gq3wQtmarodkV0guRLSztjU48_idVBuGVGOqmFKoQ/edit?hl=it&pli=1#heading=h.kyh1jjl3h2e2) to the draft.  

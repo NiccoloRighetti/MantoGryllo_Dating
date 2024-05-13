@@ -21,7 +21,6 @@ Tree is already in Newick format --> ```ultrametric_na.tree```.
 To calculate the beta parameter for the subsequent MCMCtree analysis, the ultrametric tree has been imported in R and the following commands have been launched:
 ```R
 # Needed libraries:
-library(rstudioapi)
 library(phytools)
 
 # Ultrametric tree import:

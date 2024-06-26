@@ -1,0 +1,78 @@
+# PLOTS
+# Here you can find the commands to plot one single tree (the one we displayed in the paper) and to plot the other main figures.
+
+# List of required packages
+# Needed packages
+library(MCMCtreeR, quietly = TRUE, warn.conflicts = FALSE)
+library(readr)
+library(ape)
+library(scales)
+library(ggplot2)
+library(tm)
+library(gridExtra)
+library(fmsb)
+library(devtools)
+library(ggradar)
+library(cowplot)
+library(dplyr)
+
+# TREE PLOT
+with_all_clock2<-as.character(c("#NEXUS","begin trees","","(Anax_imperator: 4.878595, ((Zorotypus_medoensis: 4.513863, (Challia_fletcheri: 2.393924, Euborellia_arcanum: 2.393924) [&95%={1.53901, 3.25375}]: 2.119939) [&95%={3.98161, 4.98394}]: 0.221288, (((Mesocapnia_arizonensis: 3.153605, Pteronarcys_princeps: 3.153605) [&95%={2.74179, 3.45746}]: 0.320172, (Zelandoperla_fenestrata: 2.881256, Acroneuria_hainana: 2.881256) [&95%={2.09403, 3.27585}]: 0.592521) [&95%={3.39782, 3.65864}]: 0.760282, (((Gryllotalpa_unispina: 2.853027, Teleogryllus_emma: 2.853027) [&95%={2.16045, 3.26512}]: 0.692933, (Atractomorpha_sinensis: 1.845547, (Acrida_cinerea: 1.374569, (Xyleus_modestus: 1.107138, Tristira_magellanica: 1.107138) [&95%={0.666042, 1.65753}]: 0.267432) [&95%={0.907812, 1.93772}]: 0.470978) [&95%={1.30478, 2.45462}]: 1.700412) [&95%={3.41901, 3.7615}]: 0.275119, (((Leptomantella_albella: 1.582158, ((Creobroter_gemmatus: 0.965248, Anaxarcha_zhengi: 0.965248) [&95%={0.637286, 1.34159}]: 0.224932, (Mantis_religiosa: 0.959989, (Rhombodera_valida: 0.754187, Tenodera_sinesi: 0.754187) [&95%={0.466246, 1.10749}]: 0.205802) [&95%={0.66263, 1.32327}]: 0.230191) [&95%={0.876099, 1.56793}]: 0.391978) [&95%={1.18526, 2.05079}]: 1.519674, ((Gromphadorhina_portentosa: 1.993605, Blattella_bisignata: 1.993605) [&95%={1.33201, 2.53579}]: 0.939840, (Eupolyphaga_sinensis: 2.857919, (Periplaneta_americana: 2.726065, (Cryptocercus_kyebangensis: 2.529992, (Mastotermes_darwiniensis: 2.318378, (Zootermopsis_nevadensis: 2.012824, (Cryptotermes_secundus: 1.745008, (Nasutitermes_corniger: 1.034510, (Reticulitermes_flavipes: 0.819141, (Coptotermes_formosanus: 0.530538, Heterotermes_validus: 0.530538) [&95%={0.312185, 0.805323}]: 0.288603) [&95%={0.563109, 1.11701}]: 0.215369) [&95%={0.751664, 1.35103}]: 0.710498) [&95%={1.43366, 2.00244}]: 0.267815) [&95%={1.73863, 2.21083}]: 0.305554) [&95%={2.27488, 2.4239}]: 0.211615) [&95%={2.40384, 2.69505}]: 0.196073) [&95%={2.55861, 2.91561}]: 0.131854) [&95%={2.67647, 3.0447}]: 0.075527) [&95%={2.74964, 3.11775}]: 0.168387) [&95%={2.91038, 3.28613}]: 0.439651, (((Galloisiana_yusai: 1.883840, (Grylloblatta_sculleni: 0.525979, Grylloblatta_bifratrilecta: 0.525979) [&95%={0.275467, 0.899719}]: 1.357861) [&95%={1.21357, 2.60271}]: 1.406387, (Tanzaniophasma_sp: 1.218194, (Mantophasma_sp: 0.407036, Sclerophasma_paresisensis: 0.407036) [&95%={0.217585, 0.701409}]: 0.811159) [&95%={0.755145, 1.84795}]: 2.072033) [&95%={2.97261, 3.57053}]: 0.131346, ((Aposthonia_japonica: 1.493289, (Aposthonia_borneensis: 0.322041, Eosembia_sp: 0.322041) [&95%={0.175329, 0.53281}]: 1.171247) [&95%={1.03287, 2.00254}]: 1.556649, (Timema_californicum: 2.884722, (Carausius_morosus: 2.043521, (((Nanhuaphasma_hamicercum: 1.213557, Orthomeria_smaragdinum: 1.213557) [&95%={0.817459, 1.60786}]: 0.515687, (Phyllium_tibetense: 0.757634, Cryptophyllium_westwoodi: 0.757634) [&95%={0.439939, 1.14353}]: 0.971609) [&95%={1.40453, 2.06556}]: 0.134973, (Peruphasma_schultei: 1.688407, ((Bacillus_rossius: 1.381265, Sipyloidea_sipylus: 1.381265) [&95%={1.02308, 1.73355}]: 0.197949, (Heteropteryx_dilatata: 1.444592, (Extatosoma_tiaratum: 1.229370, Ramulus_irregulariterdentatus: 1.229370) [&95%={0.877256, 1.58615}]: 0.215222) [&95%={1.11173, 1.78234}]: 0.134622) [&95%={1.25755, 1.90981}]: 0.109194) [&95%={1.3662, 2.0186}]: 0.175809) [&95%={1.54392, 2.1917}]: 0.179305) [&95%={1.70959, 2.38137}]: 0.841201) [&95%={2.64706, 3.14655}]: 0.165216) [&95%={2.79288, 3.32937}]: 0.371636) [&95%={3.1681, 3.67573}]: 0.119910) [&95%={3.32137, 3.79599}]: 0.279595) [&95%={3.61052, 4.08785}]: 0.412980) [&95%={3.93442, 4.59249}]: 0.501092) [&95%={4.29258, 5.1451}]: 0.143445) [&95%={4.3922, 5.24465}];","END;"))
+phy_with_all_2 <- readMCMCtree(with_all_clock2, from.file = FALSE)
+
+wout_all_clock2<-as.character(c("#NEXUS","begin trees","","(Anax_imperator: 4.878595, ((Zorotypus_medoensis: 4.513863, (Challia_fletcheri: 2.393924, Euborellia_arcanum: 2.393924) [&95%={1.53901, 3.25375}]: 2.119939) [&95%={3.98161, 4.98394}]: 0.221288, (((Mesocapnia_arizonensis: 3.153605, Pteronarcys_princeps: 3.153605) [&95%={2.74179, 3.45746}]: 0.320172, (Zelandoperla_fenestrata: 2.881256, Acroneuria_hainana: 2.881256) [&95%={2.09403, 3.27585}]: 0.592521) [&95%={3.39782, 3.65864}]: 0.760282, (((Gryllotalpa_unispina: 2.853027, Teleogryllus_emma: 2.853027) [&95%={2.16045, 3.26512}]: 0.692933, (Atractomorpha_sinensis: 1.845547, (Acrida_cinerea: 1.374569, (Xyleus_modestus: 1.107138, Tristira_magellanica: 1.107138) [&95%={0.666042, 1.65753}]: 0.267432) [&95%={0.907812, 1.93772}]: 0.470978) [&95%={1.30478, 2.45462}]: 1.700412) [&95%={3.41901, 3.7615}]: 0.275119, (((Leptomantella_albella: 1.582158, ((Creobroter_gemmatus: 0.965248, Anaxarcha_zhengi: 0.965248) [&95%={0.637286, 1.34159}]: 0.224932, (Mantis_religiosa: 0.959989, (Rhombodera_valida: 0.754187, Tenodera_sinesi: 0.754187) [&95%={0.466246, 1.10749}]: 0.205802) [&95%={0.66263, 1.32327}]: 0.230191) [&95%={0.876099, 1.56793}]: 0.391978) [&95%={1.18526, 2.05079}]: 1.519674, ((Gromphadorhina_portentosa: 1.993605, Blattella_bisignata: 1.993605) [&95%={1.33201, 2.53579}]: 0.939840, (Eupolyphaga_sinensis: 2.857919, (Periplaneta_americana: 2.726065, (Cryptocercus_kyebangensis: 2.529992, (Mastotermes_darwiniensis: 2.318378, (Zootermopsis_nevadensis: 2.012824, (Cryptotermes_secundus: 1.745008, (Nasutitermes_corniger: 1.034510, (Reticulitermes_flavipes: 0.819141, (Coptotermes_formosanus: 0.530538, Heterotermes_validus: 0.530538) [&95%={0.312185, 0.805323}]: 0.288603) [&95%={0.563109, 1.11701}]: 0.215369) [&95%={0.751664, 1.35103}]: 0.710498) [&95%={1.43366, 2.00244}]: 0.267815) [&95%={1.73863, 2.21083}]: 0.305554) [&95%={2.27488, 2.4239}]: 0.211615) [&95%={2.40384, 2.69505}]: 0.196073) [&95%={2.55861, 2.91561}]: 0.131854) [&95%={2.67647, 3.0447}]: 0.075527) [&95%={2.74964, 3.11775}]: 0.168387) [&95%={2.91038, 3.28613}]: 0.439651, (((Galloisiana_yusai: 1.883840, (Grylloblatta_sculleni: 0.525979, Grylloblatta_bifratrilecta: 0.525979) [&95%={0.275467, 0.899719}]: 1.357861) [&95%={1.21357, 2.60271}]: 1.406387, (Tanzaniophasma_sp: 1.218194, (Mantophasma_sp: 0.407036, Sclerophasma_paresisensis: 0.407036) [&95%={0.217585, 0.701409}]: 0.811159) [&95%={0.755145, 1.84795}]: 2.072033) [&95%={2.97261, 3.57053}]: 0.131346, ((Aposthonia_japonica: 1.493289, (Aposthonia_borneensis: 0.322041, Eosembia_sp: 0.322041) [&95%={0.175329, 0.53281}]: 1.171247) [&95%={1.03287, 2.00254}]: 1.556649, (Timema_californicum: 2.884722, (Carausius_morosus: 2.043521, (((Nanhuaphasma_hamicercum: 1.213557, Orthomeria_smaragdinum: 1.213557) [&95%={0.817459, 1.60786}]: 0.515687, (Phyllium_tibetense: 0.757634, Cryptophyllium_westwoodi: 0.757634) [&95%={0.439939, 1.14353}]: 0.971609) [&95%={1.40453, 2.06556}]: 0.134973, (Peruphasma_schultei: 1.688407, ((Bacillus_rossius: 1.381265, Sipyloidea_sipylus: 1.381265) [&95%={1.02308, 1.73355}]: 0.197949, (Heteropteryx_dilatata: 1.444592, (Extatosoma_tiaratum: 1.229370, Ramulus_irregulariterdentatus: 1.229370) [&95%={0.877256, 1.58615}]: 0.215222) [&95%={1.11173, 1.78234}]: 0.134622) [&95%={1.25755, 1.90981}]: 0.109194) [&95%={1.3662, 2.0186}]: 0.175809) [&95%={1.54392, 2.1917}]: 0.179305) [&95%={1.70959, 2.38137}]: 0.841201) [&95%={2.64706, 3.14655}]: 0.165216) [&95%={2.79288, 3.32937}]: 0.371636) [&95%={3.1681, 3.67573}]: 0.119910) [&95%={3.32137, 3.79599}]: 0.279595) [&95%={3.61052, 4.08785}]: 0.412980) [&95%={3.93442, 4.59249}]: 0.501092) [&95%={4.29258, 5.1451}]: 0.143445) [&95%={4.3922, 5.24465}];","END;"))
+phy_wout_all_2 <- readMCMCtree(wout_all_clock2, from.file = FALSE)
+
+# Dataset preparation
+# Data preparation clock 2 with
+with_node_all1<-getMRCA(phy_with_all_2$apePhy,c("Galloisiana_yusai","Grylloblatta_sculleni","Grylloblatta_bifratrilecta"))
+with_data_all1<-phy_with_all_2$nodeAges[as.character(with_node_all1),1]
+with_node_all2<-getMRCA(phy_with_all_2$apePhy,c("Tanzaniophasma_sp","Mantophasma_sp","Sclerophasma_paresisensis"))
+with_data_all2<-phy_with_all_2$nodeAges[as.character(with_node_all2),1]
+with_node_all3<-getMRCA(phy_with_all_2$apePhy,c("Galloisiana_yusai","Grylloblatta_sculleni","Grylloblatta_bifratrilecta","Tanzaniophasma_sp","Mantophasma_sp","Sclerophasma_paresisensis"))
+with_data_all3<-phy_with_all_2$nodeAges[as.character(with_node_all3),1]
+with_node_all4<-getMRCA(phy_with_all_2$apePhy,c("Galloisiana_yusai","Grylloblatta_sculleni","Grylloblatta_bifratrilecta","Tanzaniophasma_sp","Mantophasma_sp","Sclerophasma_paresisensis","Aposthonia_japonica","Eosembia_sp","Aposthonia_borneensis","Timema_californicum","Carausius_morosus","Cryptophyllium_westwoodi","Phyllium_tibetense","Orthomeria_smaragdinum","Nanhuaphasma_hamicercum","Peruphasma_schultei","Sipyloidea_sipylus","Bacillus_rossius","Heteropteryx_dilatata","Ramulus_irregulariterdentatus","Extatosoma_tiaratum"))
+with_data_all4<-phy_with_all_2$nodeAges[as.character(with_node_all4),1]
+ages_with_all_clock1<-c(with_data_all1,with_data_all2,with_data_all3,with_data_all4)
+
+# Data preparation clock2 wout
+wout_node_all1<-getMRCA(phy_wout_all_2$apePhy,c("Galloisiana_yusai","Grylloblatta_sculleni","Grylloblatta_bifratrilecta"))
+wout_data_all1<-phy_wout_all_2$nodeAges[as.character(wout_node_all1),1]
+wout_node_all2<-getMRCA(phy_wout_all_2$apePhy,c("Tanzaniophasma_sp","Mantophasma_sp","Sclerophasma_paresisensis"))
+wout_data_all2<-phy_wout_all_2$nodeAges[as.character(wout_node_all2),1]
+wout_node_all3<-getMRCA(phy_wout_all_2$apePhy,c("Galloisiana_yusai","Grylloblatta_sculleni","Grylloblatta_bifratrilecta","Tanzaniophasma_sp","Mantophasma_sp","Sclerophasma_paresisensis"))
+wout_data_all3<-phy_wout_all_2$nodeAges[as.character(wout_node_all3),1]
+wout_node_all4<-getMRCA(phy_wout_all_2$apePhy,c("Galloisiana_yusai","Grylloblatta_sculleni","Grylloblatta_bifratrilecta","Tanzaniophasma_sp","Mantophasma_sp","Sclerophasma_paresisensis","Timema_californicum","Carausius_morosus","Cryptophyllium_westwoodi","Phyllium_tibetense","Orthomeria_smaragdinum","Nanhuaphasma_hamicercum","Peruphasma_schultei","Sipyloidea_sipylus","Bacillus_rossius","Heteropteryx_dilatata","Ramulus_irregulariterdentatus","Extatosoma_tiaratum"))
+wout_data_all4<-phy_wout_all_2$nodeAges[as.character(wout_node_all4),1]
+ages_wout_all_clock2<-c(wout_data_all1,wout_data_all2,wout_data_all3,wout_data_all4)
+
+
+date<-rbind(c("Grylloblattodea","nt_with",phy_with_all_2$nodeAges[as.character(with_node_all1),]),c("Grylloblattodea","nt_wout",phy_wout_all_1$nodeAges[as.character(wout_node_all1),]),c("Grylloblattodea","AA_with",phy_AA_all_2$nodeAges[as.character(AA_node_all1),]))
+date<-rbind(date,c("Mantophasmatodea","nt_with",phy_with_all_2$nodeAges[as.character(with_node_all2),]),c("Mantophasmatodea","nt_wout",phy_wout_all_2$nodeAges[as.character(wout_node_all2),]),c("Mantophasmatodea","AA_with",phy_AA_all_2$nodeAges[as.character(AA_node_all2),]))
+date<-rbind(date,c("Xenonomia Crown","nt_with",phy_with_all_2$nodeAges[as.character(with_node_all3),]),c("Xenonomia Crown","nt_wout",phy_wout_all_2$nodeAges[as.character(wout_node_all3),]),c("Xenonomia Crown","AA_with",phy_AA_all_2$nodeAges[as.character(AA_node_all3),]))
+date<-rbind(date,c("Xenonomia Stem","nt_with",phy_with_all_2$nodeAges[as.character(with_node_all4),]),c("Xenonomia Stem","nt_wout",phy_wout_all_2$nodeAges[as.character(wout_node_all4),]),c("Xenonomia Stem","AA_with",phy_AA_all_2$nodeAges[as.character(AA_node_all4),]))
+date<-as.data.frame(date)
+colnames(date)<-c("Group","Data","Mean","Lower_bound","Higher_bound")
+date[, 3:5] <- lapply(date[, 3:5], as.numeric)
+date[, 3:5] <- lapply(date[, 3:5], function(x) as.numeric(gsub(",", ".", x, fixed = TRUE)) * 100)
+
+# Assuming "date" is your dataframe
+
+pdf("mcmctree_outputs/All_Fossils_AAs/dataset_sensitivity_test_plot.pdf", width = 11.7, height = 8.3)
+
+ggplot(date, aes(x = as.factor(Group), y = Mean, colour = Data)) +
+  ggtitle("Comparison of the dates for the groups of interest") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 1)) +
+  theme_bw() +
+  xlab("") +
+  ylab("Dating (My)") +
+  geom_point(position = position_dodge(width = 0.5)) +
+  geom_pointrange(aes(ymin = Lower_bound, ymax = Higher_bound), position = position_dodge(width = 0.5), linewidth = 1.3, alpha = 0.5) +
+  scale_color_manual(values = c("#552583", "#FDB927","darkolivegreen4")) +
+  geom_hline(yintercept = 252, linetype = "dashed", color = "firebrick1") +
+  ggplot2::annotate("text", x = 3.5, y = 252, label = "Permian/Triassic", vjust = -1.5, color = "firebrick1") +
+  geom_hline(yintercept = 201, linetype = "dashed", color = "firebrick1") +
+  ggplot2::annotate("text", x = 3.5, y = 201, label = "Triassic/Jurassic", vjust = -1.5, color = "firebrick1")
+
+dev.off()
+
